@@ -51,3 +51,7 @@
   color: #28af2f;
   background-color: transparent;
 }
+
+ul{
+  padding-left: 0 !important;
+}
