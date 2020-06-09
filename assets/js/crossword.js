@@ -51,7 +51,7 @@ let definition = new CrosswordDefinition({
       x: 6,
       y: 4,
       answer: "TATE",
-      clue: "Painted the ceiling of the Opéra Garnier in Paris",
+      clue: "Museums located in a number of places in Britain including Liverpool and London.",
       /* hints: [2, 7] */
     },
     {
