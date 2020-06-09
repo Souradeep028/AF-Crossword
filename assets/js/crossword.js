@@ -5,7 +5,7 @@ let definition = new CrosswordDefinition({
   width: 8, //width of the board, 5 cells
   acrossClues: [
     {
-      number: 1, //number to identify the world, must be unique
+      number: 2, //number to identify the world, must be unique
       x: 1, //The x position where the word starts, starting from 1
       y: 4, //The y position where the word starts, starting from 1
       answer: "POPART", //the word itself
@@ -13,7 +13,7 @@ let definition = new CrosswordDefinition({
       // hints: [2],
     },
     {
-      number: 2, //number to identify the world, must be unique
+      number: 1, //number to identify the world, must be unique
       x: 4, //The x position where the word starts, starting from 1
       y: 1, //The y position where the word starts, starting from 1
       answer: "DIEGO", //the word itself
@@ -39,7 +39,7 @@ let definition = new CrosswordDefinition({
       /* hints: [2, 7] */
     },
     {
-      number: 2,
+      number: 1,
       x: 4,
       y: 1,
       answer: "DADA",
