@@ -23,9 +23,9 @@
       <button id="play" style="height: 2rem;">Play</button>
     </div>
 
-    <div class="crossword"></div>
+    <div class="crossword" style="display: none;"></div>
 
-    <div id="game-end" style="display: flex; flex-direction: column;">
+    <div id="game-end" style="display: flex; flex-direction: column; display: none;">
       
       <div style="display: flex; flex-direction: column; padding: 0 6rem 0 6rem;">
         <h3 style="text-align: center;">Crossword Solved!</h3>
@@ -55,8 +55,8 @@
   <script src="./assets/js/crossword.js"></script>
 
   <script>
-    $('.crossword').hide();
-    $('#game-end').hide();
+    // $('.crossword').hide();
+    // $('#game-end').hide();
 
     $('#play').click(()=>{
       $('.crossword').show();
