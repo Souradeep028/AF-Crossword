@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="./assets/scss/main.css">
+  <link rel="stylesheet" href="./assets/css/crossword.structure.css">
+  <link rel="stylesheet" href="./assets/css/crossword.theme-default.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <title>AF Crossword</title>
+</head>
+
+<body>
+  <div class="page" id="start">
+    <img src="./assets/img/af_large_logo.png" class="af-logo" alt="Artfervour Logo">
+    <div id="play-game" style="display: flex; flex-direction: column;">
+      <h3>How to play?</h3>
+      <p style="margin: 0;">A. Rule 1</p>
+      <p style="margin: 0;">B. Rule 2</p>
+      <p style="margin: 0;">C. Rule 3</p>
+      <br/>
+      <button id="play" style="height: 2rem;">Play</button>
+    </div>
+
+    <div class="crossword"></div>
+
+    <div id="game-end" style="display: flex; flex-direction: column;">
+      
+      <div style="display: flex; flex-direction: column; padding: 0 6rem 0 6rem;">
+        <h3 style="text-align: center;">Crossword Solved!</h3>
+        <button id="play" style="height: 2rem; margin-bottom: 0.5rem;" onclick="location.reload()">Play Again</button>
+        <button id="play" style="height: 2rem; margin-bottom: 0.5rem;" onclick="location.assign('https://www.artfervour.com/art-fervour-quarantine-guide-to-art')">QAG</button>
+        <button style="height: 2rem;" onclick="location.assign('https://www.artfervour.com/af-games')">Play More Games</button>
+      </div>
+        
+        <div class="results-social">
+          <div id="social-text">Did you like the Crossword? Share your with your friends, so they can give it a shot!
+          </div>
+          <div class="icon-container" style="margin-top: 0.5rem;">
+            <a href="whatsapp://send?text=https://guessthetitle.artfervour.com/"><img src="https://guessthetitle.artfervour.com/fb-logo-black-circle.png" style="height: 34px; width: 34px; display: inline-block; margin-top: 0px; margin-right: 24px;" alt=""></a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://guessthetitle.artfervour.com/"><img src="https://guessthetitle.artfervour.com/whatsapp.png" style="height: 32px; width: 32px; display: inline-block; margin-top: 0px" alt=""></a>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <!-- <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/jquery-ui.min.js"></script>
+  <script src="./assets/js/crossword-definition.min.js"></script>
+  <script src="./assets/js/jquery-crossword.min.js"></script>
+  <script src="./assets/js/crossword.js"></script>
+
+  <script>
+    $('.crossword').hide();
+    $('#game-end').hide();
+
+    $('#play').click(()=>{
+      $('.crossword').show();
+      $('#play-game').hide();
+    });
+
+    // let correct=0;
+    // $('.crossword').on('crossword:clue', (e, data)=>{
+    //   data.isCorrect ? ++correct : null
+    //   if(correct===7){
+    //     $('.crossword').hide();
+    //     $('#game-end').show();
+    //   }
+    // })
+
+    $('.crossword').on("crossword:solved", (e)=> {
+      setTimeout(()=>{
+        $('.crossword').hide();
+        $('#game-end').show();
+      }, 4000);
+    })
+  </script>
+</body>
+
+</html>
