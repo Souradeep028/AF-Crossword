@@ -32,7 +32,7 @@
   font-size: 0.9rem;
   background-color: transparent;
   padding: 0.5rem;
-  list-style: upper-alpha;
+  list-style: decimal;
 }
 
 .c-crossword__clues__list .c-crossword__list-item.c-crossword__clue--active {
